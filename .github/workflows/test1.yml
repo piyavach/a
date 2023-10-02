@@ -1,0 +1,14 @@
+name: Print Text from hellome.html
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  print-text:
+    runs-on: ubuntu-latest
+
+    steps:
+    
+    - name: Print
+      run: echo "test"
