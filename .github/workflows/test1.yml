@@ -1,16 +1,19 @@
-name: Print Text from hellome.html
+name: test2
 
 on:
   push:
     branches:
-      - main
+      - master
+
 jobs:
-  print-text:
+  job1:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-
-    - name: Print
-      run: cat main.html
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
